@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-
 /**
  *
  * * main - print the string in the put function
@@ -19,7 +17,7 @@ int main(void)
 
 {
 
-	puts("Programming is like building a multilingual puzzle,\n");
+	puts("\"Programming is like building a multilingual puzzle,\n");
 	return (0);
 
 }
