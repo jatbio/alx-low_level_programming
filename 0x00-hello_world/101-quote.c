@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: prints Dora's quote
- * Return 1
+ * Return: Always 1 (Success)
  */
 int main(void)
 {
