@@ -1,33 +1,44 @@
-#include <stdio.h>
+#include "holberton.h"
 
 /**
- * main - print possible combination of 2-digit
- *
- * Return: return zero at the end
+ * print_times_table - Prints the times table of the input,
+ *                     starting with 0.
+ * @n: The value of the times table to be printed.
  */
-int main(void)
+void print_times_table(int n)
 {
-	int i, p;
+	int num, mult, prod;
 
-	for (i =0; i < 100; i++)
+	if (n >= 0 && n <= 15)
 	{
-		for (p = 0; p< 100; p++)
+		for (num = 0; num <= n; num++)
 		{
-			if (p > i)
+			_putchar('0');
+
+			for (mult = 1; mult <= n; mult++)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
-				putchar(' ');
-				putchar((p / 10) + '0');
-				putchar((p % 10) + '0');
-				if (i != 98);
+				_putchar(',');
+				_putchar(' ');
+
+				prod = num * mult;
+
+				if (prod <= 99)
+					_putchar(' ');
+				if (prod <= 9)
+					_putchar(' ');
+
+				if (prod >= 100)
 				{
-					putchar(',');
-					putchar(' ');
+					_putchar((prod / 100) + '0');
+					_putchar(((prod / 10)) % 10 + '0');
 				}
+				else if (prod <= 99 && prod >= 10)
+				{
+					_putchar((prod / 10) + '0');
+				}
+				_putchar((prod % 10) + '0');
 			}
+			_putchar('\n');
 		}
 	}
-	putchar('\n');
-	return (0);
 }
